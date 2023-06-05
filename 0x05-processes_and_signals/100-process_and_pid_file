@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# a bash script that trap several signals
+
+echo $$ > /var/run/myscript.pid
+
+a=1
+b=2
+while [ $a -le $b ];
+do 
+	echo "To infinity and beyond"
+	trap "echo Y U no love me?!" SIGINT
+	trap "echo I hate the kill command; rm /var/run/myscript.pid; exit" SIGTERM
+	trap "rm /var/run/myscript.pid; exit" SIGQUIT
+	sleep 5
+done

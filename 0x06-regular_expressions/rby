@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+name=$1
+echo '#!/usr/bin/env ruby' > "$name"
+vi "$name"
+chmod u+x "$name"

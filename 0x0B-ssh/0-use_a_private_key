@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+ssh -i ~/.ssh/id_rsa ubuntu@972b33788a76.6a863191.alx-cod.online
